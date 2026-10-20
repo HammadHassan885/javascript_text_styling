@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text Styler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Text Styler</h1>
+    <p>Click the buttons to change how the text looks. You can also type in the text box.</p>
+  </header>
+
+  <div class="layout">
+    <section class="controls" aria-label="Controls">
+
+      <fieldset>
+        <legend>Text color</legend>
+        <div class="row">
+          <button class="swatch" data-color="#c0392b" style="background:#c0392b" aria-label="Red"></button>
+          <button class="swatch" data-color="#1d4f85" style="background:#1d4f85" aria-label="Blue"></button>
+          <button class="swatch" data-color="#2f6b4f" style="background:#2f6b4f" aria-label="Green"></button>
+          <button class="swatch" data-color="#e8a317" style="background:#e8a317" aria-label="Orange"></button>
+          <button class="swatch" data-color="#7d3c98" style="background:#7d3c98" aria-label="Purple"></button>
+          <button class="swatch" data-color="#111111" style="background:#111111" aria-label="Black"></button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Font size <span id="sizeLabel">20px</span></legend>
+        <div class="row">
+          <button id="smaller" type="button">A−</button>
+          <button id="bigger" type="button">A+</button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Font family</legend>
+        <div class="row">
+          <button data-font="Arial, sans-serif" style="font-family:Arial">Arial</button>
+          <button data-font="Georgia, serif" style="font-family:Georgia">Georgia</button>
+          <button data-font='"Courier New", monospace' style="font-family:'Courier New'">Courier New</button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Style</legend>
+        <div class="row">
+          <button id="bold" type="button" aria-pressed="false"><b>Bold</b></button>
+          <button id="italic" type="button" aria-pressed="false"><i>Italic</i></button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Text decoration</legend>
+        <div class="row">
+          <button data-deco="underline" type="button" aria-pressed="false">Underline</button>
+          <button data-deco="overline" type="button" aria-pressed="false">Overline</button>
+          <button data-deco="line-through" type="button" aria-pressed="false">Line-through</button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Alignment</legend>
+        <div class="row">
+          <button data-align="left" type="button">Left</button>
+          <button data-align="center" type="button">Center</button>
+          <button data-align="right" type="button">Right</button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Letter case</legend>
+        <div class="row">
+          <button data-case="uppercase" type="button">UPPERCASE</button>
+          <button data-case="lowercase" type="button">lowercase</button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Text area background</legend>
+        <div class="row">
+          <button class="swatch" data-bg="#fff3cd" style="background:#fff3cd" aria-label="Yellow"></button>
+          <button class="swatch" data-bg="#d6eaf8" style="background:#d6eaf8" aria-label="Light blue"></button>
+          <button class="swatch" data-bg="#d5f5e3" style="background:#d5f5e3" aria-label="Light green"></button>
+          <button class="swatch" data-bg="#fadbd8" style="background:#fadbd8" aria-label="Light pink"></button>
+          <button class="swatch" data-bg="#2c3e50" style="background:#2c3e50" aria-label="Dark slate"></button>
+        </div>
+      </fieldset>
+
+      <div class="row last">
+        <button id="theme" type="button" class="primary">Dark mode</button>
+        <button id="reset" type="button" class="danger">Reset</button>
+      </div>
+    </section>
+
+    <section class="preview" aria-label="Preview">
+      <div id="textBox" contenteditable="true" spellcheck="false">The University of Layyah is a growing centre of learning in southern Punjab. Use the buttons to style this paragraph, or click here and type your own words.</div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
